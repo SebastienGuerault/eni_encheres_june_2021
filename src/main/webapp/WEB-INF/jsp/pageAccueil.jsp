@@ -9,7 +9,7 @@
 	
 	<body>
 	
-		<h1>Bienvenue ${sessionScope.email} sur le site ENI Enchères</h1>
+		<h1>Bienvenue ${sessionScope.email} sur le site Les Objets sont nos Amis</h1>
 		
 		<a href="${pageContext.request.contextPath}/logout">Logout</a>
 	
