@@ -54,7 +54,7 @@ public class LoginPageServlet extends HttpServlet {
 			
 			System.out.println("Les identifiants ne sont pas valides");
 			req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
-			//System.err.println("Email ou mot de passe invalides");
+
 			
 		}
 
