@@ -1,0 +1,6 @@
+/target/
+/build/
+.attach_*
+.classpath
+.project
+.settings/
