@@ -11,135 +11,236 @@ package fr.eni.encheres.bo;
  */
 import java.io.Serializable;
 
-public abstract class Utilisateur implements Serializable  {
+public class Utilisateur implements Serializable  {
 	
 	private static final long serialVersionUID = 1L;
 	private int noUtilisateur;
+	private String pseudo;
 	private String nom;
 	private String prenom;
 	private String adresseMail;
-	private String motDePasse;
-	private String adresse;
-	private int codePostal;
+	private String telephone;
+	private String rue;
+	private String codePostal;
 	private String ville;
-	private int telephone;
+	private String motDePasse;
 	private int credit;
 	private Boolean administrateur;
 	
 	public Utilisateur() {
+		super();
 	}
+	
 
-	public Utilisateur(int noUtilisateur, String nom, String prenom, String adresseMail, String motDePasse, String adresse, int codePostal, String ville, int telephone, int credit, Boolean administrateur) {
+
+	public Utilisateur(int noUtilisateur, String pseudo, String nom, String prenom, String adresseMail,
+			String telephone, String rue, String codePostal, String ville, String motDePasse, int credit,
+			Boolean administrateur) {
 		super();
 		this.noUtilisateur = noUtilisateur;
+		this.pseudo = pseudo;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.adresseMail = adresseMail;
-		this.motDePasse = motDePasse;
-		this.adresse = adresse;
+		this.telephone = telephone;
+		this.rue = rue;
 		this.codePostal = codePostal;
 		this.ville = ville;
-		this.telephone = telephone;
+		this.motDePasse = motDePasse;
 		this.credit = credit;
 		this.administrateur = administrateur;
 	}
 	
-	public Utilisateur(String adresse, int codePostal2, String ville2) {
+	
+
+
+	public Utilisateur(String pseudo, String nom, String prenom, String adresseMail, String telephone, String rue,
+			String codePostal, String ville, String motDePasse, int credit, Boolean administrateur) {
+		super();
+		this.pseudo = pseudo;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.adresseMail = adresseMail;
+		this.telephone = telephone;
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+		this.motDePasse = motDePasse;
+		this.credit = credit;
+		this.administrateur = administrateur;
 	}
+	
+	
+	
+
+
+
+	public Utilisateur(String rue, String codePostal, String ville) {
+		super();
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+	}
+
+
 
 	public int getNoUtilisateur() {
 		return noUtilisateur;
 	}
 
+
+
 	public void setNoUtilisateur(int noUtilisateur) {
 		this.noUtilisateur = noUtilisateur;
 	}
+
+
+
+	public String getPseudo() {
+		return pseudo;
+	}
+
+
+
+	public void setPseudo(String pseudo) {
+		this.pseudo = pseudo;
+	}
+
+
 
 	public String getNom() {
 		return nom;
 	}
 
+
+
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	
+
+
+
 	public String getPrenom() {
 		return prenom;
 	}
 
+
+
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	
+
+
+
 	public String getAdresseMail() {
 		return adresseMail;
 	}
 
+
+
 	public void setAdresseMail(String adresseMail) {
 		this.adresseMail = adresseMail;
 	}
-	
-	public String getMotDePasse() {
-		return motDePasse;
+
+
+
+	public String getTelephone() {
+		return telephone;
 	}
 
-	public void setMotDePasse(String motDePasse) {
-		this.motDePasse = motDePasse;
-	}
-	
-	public String getAdresse() {
-		return adresse;
+
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
 
-	public void setAdresse(String adresse) {
-		this.adresse = adresse;
+
+
+	public String getRue() {
+		return rue;
 	}
-	
-	public int getCodePostal() {
+
+
+
+	public void setRue(String rue) {
+		this.rue = rue;
+	}
+
+
+
+	public String getCodePostal() {
 		return codePostal;
 	}
 
-	public void setCodePostal(int codePostal) {
+
+
+	public void setCodePostal(String codePostal) {
 		this.codePostal = codePostal;
 	}
-	
+
+
+
 	public String getVille() {
 		return ville;
 	}
 
+
+
 	public void setVille(String ville) {
 		this.ville = ville;
 	}
-	
-	public int getTelephone() {
-		return telephone;
+
+
+
+	public String getMotDePasse() {
+		return motDePasse;
 	}
 
-	public void setTelephone(int telephone) {
-		this.telephone = telephone;
+
+
+	public void setMotDePasse(String motDePasse) {
+		this.motDePasse = motDePasse;
 	}
-	
+
+
+
 	public int getCredit() {
 		return credit;
 	}
 
+
+
 	public void setCredit(int credit) {
 		this.credit = credit;
 	}
-	
+
+
+
 	public Boolean getAdministrateur() {
 		return administrateur;
 	}
+
+
 
 	public void setAdministrateur(Boolean administrateur) {
 		this.administrateur = administrateur;
 	}
 
+
+
 	@Override
 	public String toString() {
-		return "Utilisateur [noUtilisateur=" + noUtilisateur + ", nom=" + nom + ", prenom=" + prenom + ", adresseMail="
-				+ adresseMail + ", motDePasse=" + motDePasse + ", adresse=" + adresse + ", codePostal=" + codePostal
-				+ ", ville=" + ville + ", telephone=" + telephone + ", credit=" + credit + ", administrateur="
-				+ administrateur + "]";
+		return "Utilisateur [noUtilisateur=" + noUtilisateur + ", pseudo=" + pseudo + ", nom=" + nom + ", prenom="
+				+ prenom + ", adresseMail=" + adresseMail + ", telephone=" + telephone + ", rue=" + rue
+				+ ", codePostal=" + codePostal + ", ville=" + ville + ", motDePasse=" + motDePasse + ", credit="
+				+ credit + ", administrateur=" + administrateur + "]";
 	}
+	
+	
+	
+	
+	
 }
+
+	
+	

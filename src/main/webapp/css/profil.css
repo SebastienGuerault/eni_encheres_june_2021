@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+  /* following style will be applied to every element */
+  *, *::before, *::after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+html {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+   margin: 20px;
+}
+
+h2 {
+   text-align: center;
+}
+
+.centering {
+   margin-top: 50px;
+   text-align: center;
+}
